@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: SS
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=BT1Security;encrypt=false
+    username: sa
+    password: 123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+  main:
+    allow-bean-definition-overriding: true
+
+oauth:
+  uri: https://oauth2.googleapis.com/token
+  redirect-uri: http://localhost:8080/api/oauth/google
+  userinfo: https://www.googleapis.com/oauth2/v1/userinfo
+  client-id: 44286010933-d6hclq767ielrfgndmr9s4ciqna2542u.apps.googleusercontent.com
+  client-secret: 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
